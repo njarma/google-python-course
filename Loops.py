@@ -327,3 +327,67 @@ print(string1[0])   # Prints “G”
 print(string1[4:8]) # Prints “ting”
 print(string1[11:]) # Prints “Earthlings”
 print(string1[:5])  # Prints “Greet”
+print(string1[-10:]) # Prints “Earthlings” again
+print(string1[55:]) # Prints “”
+
+'''
+    How to join strings 
+'''
+
+print("Hello" + " " + "world") #Prints “Hello world”
+
+
+greetings = ["Hello", "world"]
+print(" ".join(greetings)) # Prints "Hello world"
+#You can also concatenate a combination of strings and variables like in the following example.
+name = "Alice"
+print("Hello, " + name + "!") # Prints "Hello, Alice!"
+
+'''
+    How to combine slicing and joining strings
+'''
+
+phonenum = '2025551212'
+
+# The first 3 digits are the area code:
+area_code = "(" + phonenum[:3] + ")"
+print("The area code is:", area_code)
+
+# The next 3 digits are called the “exchange”:
+exchange = phonenum[3:6]
+print("The exchange is:", exchange)
+
+# The next 3 digits are the line number:
+line = phonenum[-4:]
+print("The line number is:", line)
+
+def format_phone(phonenum):
+    area_code = "(" + phonenum[:3] + ")"
+    exchange = phonenum[3:6]
+    line = phonenum[-4:]
+    return area_code + " " + exchange + "-" + line
+
+print(format_phone("2025551212")) # Outputs: (202) 555-1212
+
+'''
+    List comprehension
+'''
+
+sequence = range(10)
+new_list = []
+for x in sequence:
+    if x % 2 == 0:
+        new_list.append(x)
+print(new_list)
+
+# Use this instead, using list comprehension.
+sequence = range(10)
+new_list = [x for x in sequence if x % 2 == 0]
+print(new_list)
+
+'''
+    One liners
+'''
+
+print("*" * 8)
+# prints: ********
