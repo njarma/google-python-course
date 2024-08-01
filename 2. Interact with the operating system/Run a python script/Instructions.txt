@@ -1,0 +1,5 @@
+Add permissions to the file
+    # chmod +x install_using_pip3.py
+
+allows you to run the code as follows:
+    # ./install_using_pip3.py
